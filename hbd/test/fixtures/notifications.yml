@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  gift: one
+  friend: one
+  type_notification: MyString
+  link_notifcation: MyString
+
+two:
+  user: two
+  gift: two
+  friend: two
+  type_notification: MyString
+  link_notifcation: MyString

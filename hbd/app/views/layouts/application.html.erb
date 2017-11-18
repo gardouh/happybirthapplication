@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hbd</title>
+    <%= csrf_meta_tags %>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+  </head>
+
+
+<% if logged_in? %>
+
+  <body class="hold-transition skin-blue layout-top-nav">
+      <%= render('layouts/header') %>
+    <div class="container-fluid text-center">    
+      <div class="row content">
+
+
+
+           
+
+        <div class="col-sm-8 text-left"> 
+    <% end %>
+
+          <%= yield %>
+<% if logged_in? %>
+
+        </div>
+</div>
+</div>
+
+
+</body>
+    <% end %>
+
+</html>

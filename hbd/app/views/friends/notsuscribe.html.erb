@@ -1,0 +1,10 @@
+
+
+
+
+<% @all.each do |user| %>
+<p><%= link_to user.name, controller: "profile", action: "other", id: user.id  %> </p>
+<p><%= image_tag images user  %> </p>
+
+<% end %>
+

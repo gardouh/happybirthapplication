@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+   
+<%= image_tag largeimage %>
+<h1>Births</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @births.each do |birth| %>
+      <tr>
+        <td><%= image_tag birth.image , alt: "Mon image", width: 64, height: 64 %></td>
+        <td><%= birth.title %></td>
+        <td><%= birth.description %></td>
+        <td><%= link_to 'Show', birth %></td>
+        <td><%= link_to 'Edit', edit_birth_path(birth) %></td>
+        <td><%= link_to 'Destroy', birth, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Birth', new_birth_path %>

@@ -1,0 +1,36 @@
+<%= form_with(model: birth, local: true) do |form| %>
+  <% if birth.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(birth.errors.count, "error") %> prohibited this birth from being saved:</h2>
+
+      <ul>
+      <% birth.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :birth_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :birth_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :birth_user_id %>
+  </div>
+   <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image, id: :gift_image_birth %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  suscribe: false
+  friends_id: 1
+  user: one
+
+two:
+  suscribe: false
+  friends_id: 1
+  user: two

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pseudo:</strong>
+  <%= @userprofile.pseudo %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @userprofile.experience %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @userprofile.skills %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @userprofile.location %>
+</p>
+
+<p>
+  <strong>About me:</strong>
+  <%= @userprofile.about_me %>
+</p>
+
+<p>
+  <strong>Followers:</strong>
+  <%= @userprofile.followers %>
+</p>
+
+<p>
+  <strong>Following:</strong>
+  <%= @userprofile.following %>
+</p>
+
+<p>
+  <strong>Friends:</strong>
+  <%= @userprofile.friends %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @userprofile.user %>
+</p>
+
+<%= link_to 'Edit', edit_userprofile_path(@userprofile) %> |
+<%= link_to 'Back', userprofiles_path %>

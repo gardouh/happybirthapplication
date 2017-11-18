@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @birth.image , alt: "Mon image", width: 64, height: 64 %>
+</p>
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @birth.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @birth.description %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_birth_path(@birth) %> |
+<%= link_to 'Back', births_path %>

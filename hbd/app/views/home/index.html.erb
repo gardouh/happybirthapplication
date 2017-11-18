@@ -1,0 +1,14 @@
+ <ul>
+ <% flash.each do |key, msg| %>
+   <%= content_tag :li, msg, id: key %>
+ <% end %>
+ </ul>
+
+
+<div id="user-widget">
+  <% if current_user %>
+    Welcome <strong><%= current_user.name %></strong>!
+  <% end %>
+</div>
+
+

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pseudo: MyString
+  experience: MyText
+  skills: MyText
+  location: MyString
+  about_me: MyText
+  followers: 1
+  following: 1
+  friends: 1
+  user: one
+
+two:
+  pseudo: MyString
+  experience: MyText
+  skills: MyText
+  location: MyString
+  about_me: MyText
+  followers: 1
+  following: 1
+  friends: 1
+  user: two

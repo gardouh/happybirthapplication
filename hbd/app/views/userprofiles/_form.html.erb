@@ -1,0 +1,62 @@
+<%= form_with(model: userprofile, local: true) do |form| %>
+  <% if userprofile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(userprofile.errors.count, "error") %> prohibited this userprofile from being saved:</h2>
+
+      <ul>
+      <% userprofile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :pseudo %>
+    <%= form.text_field :pseudo, id: :userprofile_pseudo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :experience %>
+    <%= form.text_area :experience, id: :userprofile_experience %>
+  </div>
+
+  <div class="field">
+    <%= form.label :skills %>
+    <%= form.text_area :skills, id: :userprofile_skills %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :userprofile_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :about_me %>
+    <%= form.text_area :about_me, id: :userprofile_about_me %>
+  </div>
+
+  <div class="field">
+    <%= form.label :followers %>
+    <%= form.number_field :followers, id: :userprofile_followers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :following %>
+    <%= form.number_field :following, id: :userprofile_following %>
+  </div>
+
+  <div class="field">
+    <%= form.label :friends %>
+    <%= form.number_field :friends, id: :userprofile_friends %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :userprofile_user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
